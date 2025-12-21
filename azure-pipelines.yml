@@ -9,7 +9,11 @@ stages:
       - job: terraforminit
         displayName: 'terraform init'
         steps:
-          - task: PowerShell@2
+          - task: TerraformTask@5
             inputs:
-             targetType: 'inline'
-             script: 'terraform init'
+             provider: 'azurerm'
+             command: 'init'
+             backendServiceArm: 'Azure subscription 1(a24be557-68c8-4061-8e03-00e95b3924da)'
+             backendAzureRmStorageAccountName: 'backup4389'
+             backendAzureRmContainerName: 'backup'
+             backendAzureRmKey: 'tf'
