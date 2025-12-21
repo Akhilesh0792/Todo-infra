@@ -3,6 +3,13 @@ trigger:
 
 pool: ak
 
-steps:
-- script: echo Hello from Azure-hosted agent
-  displayName: 'Run a script'
+stages:
+  - stage: terraformtask
+    jobs:
+      - job: terraforminit
+        displayName: 'terraform init'
+        steps:
+          - task: PowerShell@2
+            inputs:
+             targetType: 'inline'
+             script: 'terraform init'
