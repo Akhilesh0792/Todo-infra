@@ -17,12 +17,8 @@ stages:
               backendAzureRmStorageAccountName: 'backup4389'
               backendAzureRmContainerName: 'backup'
               backendAzureRmKey: 'tf'
-      - job: terraformplan
-        displayName: 'terraform plan'
-        steps:
+
           - task: TerraformTask@5
             inputs:
               provider: 'azurerm'
               command: 'plan'
-              workingDirectory: '$(System.DefaultWorkingDirectory)/todo/env/dev'
-              environmentServiceNameAzureRM: 'Azure subscription 1(a24be557-68c8-4061-8e03-00e95b3924da)'
