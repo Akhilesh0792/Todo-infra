@@ -8,6 +8,7 @@ steps:
   inputs:
     provider: 'azurerm'
     command: 'init'
+    workingDirectory: '$(System.DefaultWorkingDirectory)/todoaap/Env/Dev'
     backendServiceArm: 'aap1'
     backendAzureRmOverrideSubscriptionID: '762b3486-079b-43e4-bcec-90f087ae5476'
     backendAzureRmResourceGroupName: 'aks'
