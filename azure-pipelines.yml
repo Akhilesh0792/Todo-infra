@@ -18,5 +18,5 @@ steps:
   inputs:
     provider: 'azurerm'
     command: 'plan'
-    workingDirectory: '$(System.DefaultWorkingDirectory/env/dev)'
+    workingDirectory: '$(System.DefaultWorkingDirectory/todoaap/Env/Dev)'
     environmentServiceNameAzureRM: 'aap1'
