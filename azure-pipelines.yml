@@ -10,6 +10,10 @@ steps:
     command: 'init'
     workingDirectory: '$(System.DefaultWorkingDirectory)'
     backendServiceArm: 'aap1'
+    backendAzureRmOverrideSubscriptionID: '762b3486-079b-43e4-bcec-90f087ae5476'
+    backendAzureRmResourceGroupName: 'aks'
+    backendAzureRmStorageAccountName: 'backend4389'
+    backendAzureRmContainerName: 'aks'
 - task: TerraformTask@5
   inputs:
     provider: 'azurerm'
