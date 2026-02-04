@@ -1,7 +1,7 @@
 trigger:
 - main
 
-pool: ak
+pool: terraform
 
 stages:
   - stage: terraformtask
