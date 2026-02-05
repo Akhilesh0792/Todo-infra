@@ -25,6 +25,7 @@ steps:
 - task: TerraformTask@5
   inputs:
     provider: 'azurerm'
-    command: 'init'
-    workingDirectory: '$(System.DefaultWorkingDirectory)/todoaap/Enb/Dev'
-    backendServiceArm: 'aap1'
+    command: 'apply'
+    workingDirectory: '$(System.DefaultWorkingDirectory)/todoaap/Env/Dev'
+    commandOptions: '-auto-approve'
+    environmentServiceNameAzureRM: 'aap1'
