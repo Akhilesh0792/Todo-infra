@@ -21,3 +21,10 @@ steps:
     command: 'plan'
     workingDirectory: '$(System.DefaultWorkingDirectory)/todoaap/Env/Dev'
     environmentServiceNameAzureRM: 'aap1'
+
+- task: TerraformTask@5
+  inputs:
+    provider: 'azurerm'
+    command: 'init'
+    workingDirectory: '$(System.DefaultWorkingDirectory)/todoaap/Enb/Dev'
+    backendServiceArm: 'aap1'
